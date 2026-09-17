@@ -9,7 +9,7 @@ const cursosDestacados = [
 ]
 
 function Home() {
-  const { isAuthenticated } = useAuth()
+  const { authStatus } = useAuth()
 
   return (
     <main>
@@ -21,7 +21,7 @@ function Home() {
             <p>CourseHub permite acceder a cursos, seguir el progreso y organizar el aprendizaje de forma sencilla.</p>
             <div className="button-row">
               <a className="button" href="#cursos">Explorar cursos</a>
-              {isAuthenticated ? null : <Link className="button button--outline" to="/login">Iniciar sesión</Link>}
+              {authStatus === 'unauthenticated' ? <Link className="button button--outline" to="/login">Iniciar sesión</Link> : null}
             </div>
           </div>
           <div className="hero__visual" aria-hidden="true">

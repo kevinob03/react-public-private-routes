@@ -1,6 +1,7 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import CourseCard from '../components/CourseCard.jsx'
 import StatCard from '../components/StatCard.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 
 const estadisticas = [
   { id: 1, icono: '▣', valor: '3', etiqueta: 'Cursos inscritos' },
@@ -9,6 +10,8 @@ const estadisticas = [
 ]
 
 function Dashboard() {
+  const { user } = useAuth()
+  const nombreRol = user?.role === 'admin' ? 'administrador' : 'estudiante'
   const [cursos, setCursos] = useState([])
   const [cargando, setCargando] = useState(true)
   const [error, setError] = useState('')
@@ -34,7 +37,7 @@ function Dashboard() {
 
   return (
     <main className="page container">
-      <header className="page-heading"><span className="eyebrow">Panel del estudiante</span><h1>Hola, estudiante 👋</h1><p>Continúa aprendiendo donde lo dejaste.</p></header>
+      <header className="page-heading"><span className="eyebrow">Panel del estudiante</span><h1>Hola, {nombreRol} 👋</h1><p>Continúa aprendiendo donde lo dejaste.</p></header>
       <section className="stats-grid" aria-label="Resumen académico">
         {estadisticas.map((estadistica) => <StatCard key={estadistica.id} {...estadistica} />)}
       </section>

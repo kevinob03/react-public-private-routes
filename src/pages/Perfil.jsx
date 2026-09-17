@@ -1,4 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Perfil() {
   const [estudiante, setEstudiante] = useState(null)
@@ -29,7 +30,10 @@ function Perfil() {
 
   return (
     <main className="page container profile-page">
-      <header className="page-heading"><span className="eyebrow">Tu cuenta</span><h1>Mi perfil</h1><p>Consulta tu información y tu avance académico.</p></header>
+      <header className="page-heading page-heading--actions">
+        <div><span className="eyebrow">Tu cuenta</span><h1>Mi perfil</h1><p>Consulta tu información y tu avance académico.</p></div>
+        <Link className="button button--outline" to="/perfil/configuracion">Configuración</Link>
+      </header>
       {cargando ? <p className="status-message">Cargando perfil...</p> : null}
       {error ? <p className="status-message status-message--error" role="alert">{error}</p> : null}
       {!cargando && !error ? (
