@@ -1,0 +1,40 @@
+{
+  "cursos": [
+    {
+      "id": "1",
+      "nombre": "Desarrollo Web con React",
+      "profesor": "Carlos Mendoza",
+      "categoria": "Frontend",
+      "progreso": 65
+    },
+    {
+      "id": "2",
+      "nombre": "Diseño de Interfaces UI/UX",
+      "profesor": "Elena Rostova",
+      "categoria": "Diseño",
+      "progreso": 40
+    },
+    {
+      "id": "3",
+      "nombre": "Bases de Datos Relacionales",
+      "profesor": "Javier Paredes",
+      "categoria": "Datos",
+      "progreso": 90
+    }
+  ],
+  "estudiantes": [
+    {
+      "id": "1",
+      "nombre": "Estudiante",
+      "correo": "estudiante@coursehub.com",
+      "areaInteres": "Desarrollo Web"
+    },
+    {
+      "nombre": "Kevin Ortiz",
+      "correo": "kevinob046@gmail.com",
+      "areaInteres": "Desarrollo Web",
+      "id": "xFgSm_u4l1g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
