@@ -1,19 +1,35 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
+const ESTUDIANTE_ID = '1'
 
 function Perfil() {
   const [estudiante, setEstudiante] = useState(null)
+  const [ultimoResultado, setUltimoResultado] = useState(null)
   const [cargando, setCargando] = useState(true)
   const [error, setError] = useState('')
+  const [errorOrientacion, setErrorOrientacion] = useState('')
 
   useEffect(() => {
     const controller = new AbortController()
 
-    async function cargarEstudiante() {
+    async function cargarPerfil() {
       try {
-        const response = await fetch('http://localhost:3001/estudiantes/1', { signal: controller.signal })
-        if (!response.ok) throw new Error('No se pudo cargar el estudiante')
-        setEstudiante(await response.json())
+        const estudianteResponse = await fetch(`http://localhost:3001/estudiantes/${ESTUDIANTE_ID}`, { signal: controller.signal })
+        if (!estudianteResponse.ok) throw new Error('No se pudo cargar el estudiante')
+        setEstudiante(await estudianteResponse.json())
+
+        try {
+          const resultadosResponse = await fetch('http://localhost:3001/resultadosVocacionales', { signal: controller.signal })
+          if (!resultadosResponse.ok) throw new Error('No se pudo cargar la orientación')
+          const resultados = await resultadosResponse.json()
+          const propios = resultados
+            .filter((resultado) => String(resultado.estudianteId) === ESTUDIANTE_ID)
+            .sort((resultadoA, resultadoB) => new Date(resultadoB.fecha) - new Date(resultadoA.fecha))
+          setUltimoResultado(propios[0] ?? null)
+        } catch (resultadoError) {
+          if (resultadoError.name !== 'AbortError') setErrorOrientacion('No pudimos consultar tu último resultado vocacional.')
+        }
       } catch (fetchError) {
         if (fetchError.name !== 'AbortError') setError('No se pudo cargar el perfil. Comprueba JSON Server.')
       } finally {
@@ -21,12 +37,13 @@ function Perfil() {
       }
     }
 
-    cargarEstudiante()
+    cargarPerfil()
     return () => controller.abort()
   }, [])
 
   const nombre = estudiante?.nombre ?? 'Estudiante'
   const inicial = nombre.slice(0, 1).toUpperCase()
+  const areaPrincipal = ultimoResultado?.areas?.[0]
 
   return (
     <main className="page container profile-page">
@@ -47,6 +64,16 @@ function Perfil() {
             <h2>Progreso académico</h2>
             <div className="profile-stats"><div><strong>3</strong><span>Cursos activos</span></div><div><strong>1</strong><span>Completado</span></div><div><strong>24 h</strong><span>Estudiadas</span></div></div>
             <div className="progress__heading"><span>Progreso general</span><strong>65%</strong></div><div className="progress"><span style={{ width: '65%' }} /></div>
+          </section>
+          <section className="profile-card profile-orientation">
+            <div><span className="eyebrow">Descubre tus intereses</span><h2>Orientación vocacional</h2></div>
+            {errorOrientacion ? <p className="form-message form-message--error" role="alert">{errorOrientacion}</p> : ultimoResultado ? (
+              <div className="profile-orientation__result">
+                <p>Último resultado</p><strong>{ultimoResultado.perfil}</strong>
+                {areaPrincipal ? <span>Mayor afinidad: {areaPrincipal.nombre} — {areaPrincipal.afinidad}%</span> : null}
+              </div>
+            ) : <p>Aún no has realizado tu orientación vocacional.</p>}
+            <Link className="button button--small" to="/orientacion">{ultimoResultado ? 'Ver / repetir orientación' : 'Realizar test'}</Link>
           </section>
         </div>
       ) : null}

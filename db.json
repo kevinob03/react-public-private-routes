@@ -2,24 +2,327 @@
   "cursos": [
     {
       "id": "1",
-      "nombre": "Desarrollo Web con React",
+      "titulo": "Desarrollo Web con React",
       "profesor": "Carlos Mendoza",
-      "categoria": "Frontend",
-      "progreso": 65
+      "categoria": "Tecnología",
+      "areaVocacional": "Tecnología",
+      "nivel": "Intermedio",
+      "duracion": "8 semanas",
+      "descripcion": "Aprende a construir interfaces modernas y accesibles con React, componentes reutilizables y manejo de estado.",
+      "progreso": 65,
+      "modulos": [
+        "Fundamentos de React",
+        "Componentes y propiedades",
+        "Estado y eventos",
+        "Hooks",
+        "Proyecto final"
+      ]
     },
     {
       "id": "2",
-      "nombre": "Diseño de Interfaces UI/UX",
+      "titulo": "Diseño de Interfaces UI/UX",
       "profesor": "Elena Rostova",
       "categoria": "Diseño",
-      "progreso": 40
+      "areaVocacional": "Diseño",
+      "nivel": "Intermedio",
+      "duracion": "7 semanas",
+      "descripcion": "Diseña experiencias digitales claras y atractivas aplicando investigación, arquitectura de información y prototipado.",
+      "progreso": 40,
+      "modulos": [
+        "Principios UX",
+        "Investigación de usuarios",
+        "Arquitectura de información",
+        "Prototipos",
+        "Pruebas de usabilidad"
+      ]
     },
     {
       "id": "3",
-      "nombre": "Bases de Datos Relacionales",
+      "titulo": "Bases de Datos Relacionales",
       "profesor": "Javier Paredes",
       "categoria": "Datos",
-      "progreso": 90
+      "areaVocacional": "Datos",
+      "nivel": "Intermedio",
+      "duracion": "6 semanas",
+      "descripcion": "Domina el modelado relacional, SQL y las buenas prácticas para organizar y consultar información.",
+      "progreso": 90,
+      "modulos": [
+        "Modelo relacional",
+        "Consultas SQL",
+        "Relaciones y joins",
+        "Normalización",
+        "Proyecto de base de datos"
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Fundamentos de Programación",
+      "profesor": "Andrea Salas",
+      "categoria": "Tecnología",
+      "areaVocacional": "Tecnología",
+      "nivel": "Inicial",
+      "duracion": "6 semanas",
+      "descripcion": "Desarrolla el pensamiento lógico necesario para resolver problemas mediante algoritmos y programas sencillos.",
+      "progreso": 0,
+      "modulos": [
+        "Pensamiento computacional",
+        "Variables y tipos",
+        "Condicionales",
+        "Ciclos",
+        "Funciones"
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Desarrollo de APIs con Node.js",
+      "profesor": "Mateo Rojas",
+      "categoria": "Tecnología",
+      "areaVocacional": "Tecnología",
+      "nivel": "Avanzado",
+      "duracion": "9 semanas",
+      "descripcion": "Construye servicios web mantenibles y seguros con Node.js, rutas REST y persistencia de datos.",
+      "progreso": 0,
+      "modulos": [
+        "Node.js y npm",
+        "APIs REST",
+        "Middleware",
+        "Persistencia",
+        "Seguridad y despliegue"
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "Análisis de Datos con Python",
+      "profesor": "Laura Jiménez",
+      "categoria": "Datos",
+      "areaVocacional": "Datos",
+      "nivel": "Intermedio",
+      "duracion": "8 semanas",
+      "descripcion": "Transforma datos en información útil mediante Python, limpieza, exploración y visualización.",
+      "progreso": 0,
+      "modulos": [
+        "Python para datos",
+        "Limpieza",
+        "Análisis exploratorio",
+        "Visualización",
+        "Caso práctico"
+      ]
+    },
+    {
+      "id": "7",
+      "titulo": "Estadística para la Toma de Decisiones",
+      "profesor": "Samuel Vargas",
+      "categoria": "Datos",
+      "areaVocacional": "Datos",
+      "nivel": "Inicial",
+      "duracion": "7 semanas",
+      "descripcion": "Interpreta datos con estadística descriptiva, probabilidad e inferencia aplicada a situaciones reales.",
+      "progreso": 0,
+      "modulos": [
+        "Datos y variables",
+        "Estadística descriptiva",
+        "Probabilidad",
+        "Muestreo",
+        "Interpretación de resultados"
+      ]
+    },
+    {
+      "id": "8",
+      "titulo": "Diseño Gráfico Digital",
+      "profesor": "Valeria Soto",
+      "categoria": "Diseño",
+      "areaVocacional": "Diseño",
+      "nivel": "Inicial",
+      "duracion": "6 semanas",
+      "descripcion": "Explora composición, color y tipografía para comunicar ideas mediante piezas visuales coherentes.",
+      "progreso": 0,
+      "modulos": [
+        "Composición",
+        "Teoría del color",
+        "Tipografía",
+        "Sistemas visuales",
+        "Portafolio"
+      ]
+    },
+    {
+      "id": "9",
+      "titulo": "Diseño de Productos Digitales",
+      "profesor": "Nicolás Herrera",
+      "categoria": "Diseño",
+      "areaVocacional": "Diseño",
+      "nivel": "Avanzado",
+      "duracion": "9 semanas",
+      "descripcion": "Convierte necesidades de usuarios en productos digitales viables mediante un proceso de diseño integral.",
+      "progreso": 0,
+      "modulos": [
+        "Descubrimiento",
+        "Definición del problema",
+        "Ideación",
+        "Prototipado",
+        "Validación"
+      ]
+    },
+    {
+      "id": "10",
+      "titulo": "Emprendimiento y Modelos de Negocio",
+      "profesor": "Mariana Castro",
+      "categoria": "Negocios",
+      "areaVocacional": "Negocios",
+      "nivel": "Inicial",
+      "duracion": "6 semanas",
+      "descripcion": "Evalúa oportunidades y crea propuestas de valor sostenibles para nuevos proyectos y emprendimientos.",
+      "progreso": 0,
+      "modulos": [
+        "Oportunidades",
+        "Propuesta de valor",
+        "Modelo de negocio",
+        "Validación",
+        "Presentación del proyecto"
+      ]
+    },
+    {
+      "id": "11",
+      "titulo": "Marketing Digital Estratégico",
+      "profesor": "Diego Montero",
+      "categoria": "Negocios",
+      "areaVocacional": "Negocios",
+      "nivel": "Intermedio",
+      "duracion": "7 semanas",
+      "descripcion": "Planifica campañas digitales orientadas a objetivos, audiencias y medición de resultados.",
+      "progreso": 0,
+      "modulos": [
+        "Estrategia digital",
+        "Audiencias",
+        "Contenido",
+        "Canales",
+        "Métricas y optimización"
+      ]
+    },
+    {
+      "id": "12",
+      "titulo": "Gestión de Proyectos Ágiles",
+      "profesor": "Paula Brenes",
+      "categoria": "Negocios",
+      "areaVocacional": "Negocios",
+      "nivel": "Intermedio",
+      "duracion": "8 semanas",
+      "descripcion": "Organiza equipos y entregas con enfoques ágiles, priorización y mejora continua.",
+      "progreso": 0,
+      "modulos": [
+        "Mentalidad ágil",
+        "Planificación",
+        "Gestión del trabajo",
+        "Equipos colaborativos",
+        "Mejora continua"
+      ]
+    },
+    {
+      "id": "13",
+      "titulo": "Introducción a la Psicología",
+      "profesor": "Sofía Araya",
+      "categoria": "Psicología",
+      "areaVocacional": "Psicología",
+      "nivel": "Inicial",
+      "duracion": "7 semanas",
+      "descripcion": "Conoce las principales perspectivas psicológicas y su aporte al estudio de la conducta humana.",
+      "progreso": 0,
+      "modulos": [
+        "Historia de la psicología",
+        "Procesos cognitivos",
+        "Emoción",
+        "Personalidad",
+        "Psicología social"
+      ]
+    },
+    {
+      "id": "14",
+      "titulo": "Psicología del Desarrollo",
+      "profesor": "Ricardo Chaves",
+      "categoria": "Psicología",
+      "areaVocacional": "Psicología",
+      "nivel": "Intermedio",
+      "duracion": "8 semanas",
+      "descripcion": "Analiza los cambios cognitivos, emocionales y sociales a lo largo de las etapas de la vida.",
+      "progreso": 0,
+      "modulos": [
+        "Primera infancia",
+        "Niñez",
+        "Adolescencia",
+        "Adultez",
+        "Envejecimiento"
+      ]
+    },
+    {
+      "id": "15",
+      "titulo": "Bienestar y Habilidades Socioemocionales",
+      "profesor": "Gabriela Mora",
+      "categoria": "Psicología",
+      "areaVocacional": "Psicología",
+      "nivel": "Inicial",
+      "duracion": "5 semanas",
+      "descripcion": "Fortalece el autoconocimiento, la regulación emocional y las relaciones interpersonales saludables.",
+      "progreso": 0,
+      "modulos": [
+        "Autoconocimiento",
+        "Gestión emocional",
+        "Empatía",
+        "Relaciones saludables",
+        "Plan de bienestar"
+      ]
+    },
+    {
+      "id": "16",
+      "titulo": "Comunicación Oral Efectiva",
+      "profesor": "Fernando Aguilar",
+      "categoria": "Comunicación",
+      "areaVocacional": "Comunicación",
+      "nivel": "Inicial",
+      "duracion": "5 semanas",
+      "descripcion": "Comunica ideas con claridad y confianza mediante técnicas de expresión oral y escucha activa.",
+      "progreso": 0,
+      "modulos": [
+        "Mensaje y audiencia",
+        "Voz y lenguaje corporal",
+        "Estructura del discurso",
+        "Escucha activa",
+        "Presentación final"
+      ]
+    },
+    {
+      "id": "17",
+      "titulo": "Redacción para Medios Digitales",
+      "profesor": "Camila Vega",
+      "categoria": "Comunicación",
+      "areaVocacional": "Comunicación",
+      "nivel": "Intermedio",
+      "duracion": "6 semanas",
+      "descripcion": "Crea textos claros, relevantes y adaptados a diferentes plataformas y audiencias digitales.",
+      "progreso": 0,
+      "modulos": [
+        "Escritura clara",
+        "Tono y audiencia",
+        "Narrativa digital",
+        "Edición",
+        "Proyecto editorial"
+      ]
+    },
+    {
+      "id": "18",
+      "titulo": "Narrativa y Storytelling",
+      "profesor": "Martín Quesada",
+      "categoria": "Comunicación",
+      "areaVocacional": "Comunicación",
+      "nivel": "Avanzado",
+      "duracion": "7 semanas",
+      "descripcion": "Construye relatos memorables para informar, conectar con audiencias y presentar proyectos.",
+      "progreso": 0,
+      "modulos": [
+        "Elementos narrativos",
+        "Personajes y conflicto",
+        "Estructuras",
+        "Narrativa de marca",
+        "Historia final"
+      ]
     }
   ],
   "estudiantes": [
@@ -36,5 +339,7 @@
       "id": "xFgSm_u4l1g"
     }
   ],
+  "inscripciones": [],
+  "resultadosVocacionales": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

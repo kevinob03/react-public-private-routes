@@ -20,9 +20,11 @@ function Navbar() {
 
         <nav className="navbar__links" aria-label="Navegación principal">
           <NavLink to="/" end>Inicio</NavLink>
+          <NavLink to="/cursos">Cursos</NavLink>
           {authStatus === 'checking' ? null : isAuthenticated ? (
             <>
               <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/orientacion">Orientación IA</NavLink>
               <NavLink to="/perfil">Mi Perfil</NavLink>
               {user?.role === 'admin' ? <NavLink to="/dashboard/usuarios">Usuarios</NavLink> : null}
               <button className="button button--small button--outline" type="button" onClick={handleLogout}>Cerrar sesión</button>

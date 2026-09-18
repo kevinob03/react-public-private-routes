@@ -8,15 +8,20 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 3001",
+    "ai": "node --use-system-ca server/index.js"
   },
   "dependencies": {
+    "@google/genai": "^2.23.0",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.0",
+    "express": "^5.2.1",
+    "json-server": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
-    "json-server": "latest"
+    "vite": "latest"
   },
   "devDependencies": {
     "@eslint/js": "latest",

@@ -3,9 +3,9 @@ import CourseCard from '../components/CourseCard.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 
 const cursosDestacados = [
-  { id: 1, nombre: 'Desarrollo Web con React', profesor: 'Carlos Mendoza', categoria: 'Frontend', progreso: 65 },
-  { id: 2, nombre: 'Diseño de Interfaces UI/UX', profesor: 'Elena Rostova', categoria: 'Diseño', progreso: 40 },
-  { id: 3, nombre: 'Bases de Datos Relacionales', profesor: 'Javier Paredes', categoria: 'Datos', progreso: 90 },
+  { id: 1, titulo: 'Desarrollo Web con React', profesor: 'Carlos Mendoza', categoria: 'Tecnología', nivel: 'Intermedio', duracion: '8 semanas', progreso: 65 },
+  { id: 2, titulo: 'Diseño de Interfaces UI/UX', profesor: 'Elena Rostova', categoria: 'Diseño', nivel: 'Intermedio', duracion: '7 semanas', progreso: 40 },
+  { id: 3, titulo: 'Bases de Datos Relacionales', profesor: 'Javier Paredes', categoria: 'Datos', nivel: 'Intermedio', duracion: '6 semanas', progreso: 90 },
 ]
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
             <h1>Aprende a tu ritmo.<br /><span>Construye tu futuro.</span></h1>
             <p>CourseHub permite acceder a cursos, seguir el progreso y organizar el aprendizaje de forma sencilla.</p>
             <div className="button-row">
-              <a className="button" href="#cursos">Explorar cursos</a>
+              <Link className="button" to="/cursos">Explorar cursos</Link>
               {authStatus === 'unauthenticated' ? <Link className="button button--outline" to="/login">Iniciar sesión</Link> : null}
             </div>
           </div>
